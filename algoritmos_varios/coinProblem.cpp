@@ -101,7 +101,7 @@ v64 greedyCoinP(v64 v, int r){
     return vr;
 }
 
-//Algoritmo con programación dinámica (O(n*r) "r" siendo el objetivo y n el numero de monedas (Siempre da el resultado correcto))
+//Algoritmo con programación dinámica (O(n*r) "r" siendo el objetivo y "n" el numero de monedas (Siempre da el resultado correcto))
 v64 DPCoinP(v64 v, int r){
 
     //Instanciación de variables
