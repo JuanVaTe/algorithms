@@ -63,7 +63,7 @@ double eps = 1e-12;
 
 //Plantilla base para programación competitiva --> https://www.geeksforgeeks.org/how-to-setup-competitive-programming-in-visual-studio-code-for-c/
 
-//Algoritmo avaro (O(n) (Dependiendo de las monedas proporcionadas, no siempre da el resultado correcto))
+//Algoritmo avaro (O(n^2) (Dependiendo de las monedas proporcionadas, no siempre da el resultado correcto))
 v64 greedyCoinP(v64 v, int r){
     //Instanciación de variables
     //Vector donde se guardan las monedas
