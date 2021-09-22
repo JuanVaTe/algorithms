@@ -63,7 +63,7 @@ double eps = 1e-12;
 
 //Plantilla base para programación competitiva --> https://www.geeksforgeeks.org/how-to-setup-competitive-programming-in-visual-studio-code-for-c/
 
-//Algoritmo avaro
+//Algoritmo avaro (O(n) (Dependiendo de las monedas proporcionadas, no siempre da el resultado correcto))
 v64 greedyCoinP(v64 v, int r){
     //Instanciación de variables
     //Vector donde se guardan las monedas
@@ -101,7 +101,7 @@ v64 greedyCoinP(v64 v, int r){
     return vr;
 }
 
-//Algoritmo con programación dinámica
+//Algoritmo con programación dinámica (O(n*r) "r" siendo el objetivo y n el numero de monedas (Siempre da el resultado correcto))
 v64 DPCoinP(v64 v, int r){
 
     //Instanciación de variables
@@ -124,7 +124,7 @@ v64 DPCoinP(v64 v, int r){
         forn(j, sz(v)){
 
             //Valida si se puede utilizar la moneda elegida y si es más optimo que la opción anterior
-            if((i-v[j] >= 0) && (memo[i-v[j]]+1 < memo[i])){
+            if((i-v[j] >= 0) && (memo[i-v[j]] + 1 < memo[i])){
 
                 //Actualización del valor óptimo
                 memo[i] = memo[i-v[j]] + 1;
