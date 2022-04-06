@@ -64,7 +64,7 @@ double eps = 1e-12;
 //Plantilla base para programación competitiva --> https://www.geeksforgeeks.org/how-to-setup-competitive-programming-in-visual-studio-code-for-c/
 
 
-//Preproceso del string
+//Preproceso del string (O(m))
 v32 preprocess(string pattern){
     //Inicialización de variables (contadores)
     int i = 1; int j = 0;
@@ -97,8 +97,8 @@ v32 preprocess(string pattern){
     return v;
 }
 
-//Algoritmo Knuth-Morris-Pratt
-v32 kmpAlgorith(string texto, string pattern, v32 pre){
+//Algoritmo Knuth-Morris-Pratt (O(m + n) --> O(n))
+v32 kmpAlgorithm(string texto, string pattern, v32 pre){
     //Inicialización de variables (contadores)
     int i = 0; int j = 0;
     v32 indexes;
@@ -196,7 +196,7 @@ int main(){
         pre = preprocess(pattern[i]);
 
         //KMP para obtener los índices
-        indexes = kmpAlgorith(text[i], pattern[i], pre);
+        indexes = kmpAlgorithm(text[i], pattern[i], pre);
 
         //Imprime índices
         for(auto x : indexes) cout << x << " ";
